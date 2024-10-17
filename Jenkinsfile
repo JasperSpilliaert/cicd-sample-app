@@ -12,10 +12,8 @@ node {
         build 'TestSampleApp'
     }
     stage('Deploy') {
-        steps {
-            script {
-                sh 'docker run -d -p 5050:80 --name samplerunning cicd-sample-app'
-            }
+        script {
+            sh 'docker run -d -p 5050:80 --name samplerunning cicd-sample-app'
         }
     }
 }
