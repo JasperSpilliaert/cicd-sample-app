@@ -23,3 +23,5 @@ cd tempdir || exit
 docker build -t sampleapp .
 docker run -t -d -p 5050:5050 --name samplerunning sampleapp
 docker ps -a 
+
+sudo rm -r tempdir/
