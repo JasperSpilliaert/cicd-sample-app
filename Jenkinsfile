@@ -16,12 +16,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Checkout') {
-            steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/JasperSpilliaert/cicd-sample-app.git']])
-            }
-        }
         
         stage('Build') {
             steps {
